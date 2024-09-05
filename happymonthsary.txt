@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary Love Letter</title>
+    <style>
+        body {
+            background-color: #c8e6c9; /* Pastel green */
+            font-family: 'Arial', sans-serif;
+            color: #4a4a4a;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-color: #c8e6c9; }
+            50% { background-color: #a5d6a7; }
+            100% { background-color: #c8e6c9; }
+        }
+        .container {
+            display: none;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+margin: 50px auto;
+            max-width: 600px;
+            max-height: 400px; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .heart {
+            cursor: pointer;
+            font-size: 50px;
+            color: pink;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 10;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        .fireworks, .flowers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .firework, .flower {
+position: absolute;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: explode 1s forwards;
+        }
+        .flower {
+            background: pink; /* Flower color */
+            box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+        }
+        @keyframes explode {
+            0% { transform: scale(0); }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        .star {
+            position: absolute;
+            background: yellow;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+            animation: twinkle 1.5s infinite alternate;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .spotify-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="heart" onclick="openLetter()">❤️</div>
+    <div class="container" id="letter">
+        <h2>Hi Baby, Happy Happy Monthsary!</h2>
+        <p>Sorry po if late na yung message ko for you, but baby yk, i love you so much like super duper. Who would’ve thought na aabot tayo ngayon sa 4th month natin? Mwhehehehehe we’ve known each other for like 6 months na and sa 6 months na yon, ang dami nating nagawang memories. I remember the first time i saw you, i was really hoping na we’d talk and yk become my lover after hehe cuz i was really interested to you, the first time i saw you pa lang like omg 🤯 you so pogi talaga baby like super and ik sinasabi mo na hindi but love, super pogi mo for me. nag play tayo ng super dami after then ikaw kunwari pa na mas madali mag play sa 8ball kapag friends sa fb pero kinukuha mo lang talaga fb ko non no 🙄🙄 hehehehehehe but yea love, actually tuwang tuwa ako non cuz pasimple ka pa, cute na cute ako sayo nun. tapos love nag confess ka hehe super kilig ko so much that time cuz crush na crush kita ha, kahit now, crush na crush na, love na love pa HEHEHHE 
+
+Ik na lately we’ve been through a lot and ik you tried so hard to love me again and sorry if nafeel mo yan because i don’t have time for us because nga super busy ako lately and sorry talaga if hindi ko po nabigay sayo yung time ko. Thank you so much love for trying again and again. Thank you dahil hindi ka naconvince ng mga bad thoughts mo sakin especially na iwan ako. Thank you for believing in me again and thank you for loving me again. ik na nakakasawa ako, especially yung nga actions ko when it comes to fights, ik im not the best. i let my feelings go through me easily and i jump into conclusions agad kaya tayo nag fifight, kaya ik na what i need to change sakin. i’m still learning to upgrade my understanding especially when we’re fighting and love please hold on for me, okay? thank you dahil hinahabaan mo patience mo for me. ik u don’t like my makulit side cuz im super makulit and sorry baby, i’ll try to act more mature for us. I love you so much love. no words can express how much i love you but one thing is for sure, i will always love you even dumating pa tayo ulit sa “boring stage” pero sana love hindi na maulit kasi nakakasad super bwhahahahahha ayaw ko na po maulit yung ganon. sana lagi na lang tayo ganito, always happy and sweet hehehehe but i love you talaga so much baby mwa!! you made my life meaningful again and you made it worth it to wake up everyday hehe 😁😁 I promise to save our rs at all cost baby and please promise to do the same 🙁 i love you so much baby ko.</p>
+
+<img src="C:\Users\roger\Downloads\457136218_469761132700004_1057572983745262327_n.jpg" alt="Your Photo" style="width:100%; border-radius:10px;">
+
+        <p>It’s really you on my mind, always! You make every moment special. I cherish our time together and look forward to making many more memories.</p>
+        <p>More monthsary to come lovelove and more memories to make!!! Mwaaa! I love you!!! Happy monthsary again my handsome husband!</p>
+        <!-- Add more content as needed -->
+    </div>
+    <div class="fireworks" id="fireworks"></div>
+    <div class="flowers" id="flowers"></div>
+    <div class="star" id="star"></div>
+
+    <div class="spotify-player">
+        <iframe src="https://open.spotify.com/embed/track/6Nle9hKrkL1wQpwNfEkxjh" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <p>Start the song from the part 1:26!!</p>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById('letter').style.display = 'block';
+            createFireworks();
+            createFlowers();
+            createStars();
+        }
+        
+        function createFireworks() {
+            const fireworksContainer = document.getElementById('fireworks');
+            fireworksContainer.style.display = 'block';
+            fireworksContainer.innerHTML = ''; // Clear previous fireworks
+
+            for (let i = 0; i < 10; i++) {
+                const firework = document.createElement('div');
+                firework.classList.add('firework');
+                firework.style.width = firework.style.height = Math.random() * 50 + 20 + 'px';
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.top = Math.random() * 100 + 'vh';
+                fireworksContainer.appendChild(firework);
+
+                setTimeout(() => {
+                    firework.remove();
+                }, 1000); // Match with animation duration
+            }
+        }
+
+        function createFlowers() {
+            const flowersContainer = document.getElementById('flowers');
+            flowersContainer.style.display = 'block';
+            flowersContainer.innerHTML = ''; // Clear previous flowers
+
+            for (let i = 0; i < 10; i++) {
+                const flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.style.width = flower.style.height = Math.random() * 30 + 15 + 'px';
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.top = Math.random() * 100 + 'vh';
+                flowersContainer.appendChild(flower);
+
+                setTimeout(() => {
+                    flower.remove();
+                }, 1000); // Match with animation duration
+            }
+        }
+
+        function createStars() {
+            for (let i = 0; i < 20; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                document.body.appendChild(star);
+
+setTimeout(() => {
+                    star.remove();
+                }, 1500); // Remove after a while
+            }
+        }
+    </script>
+</body>
+</html>
